@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerPlate.ejs") -%>
+
+<body>
+  <div class="row mt-5 col-6 offset-3">
+    <form
+      novalidate
+      class="needs-validation"
+      action="/expenses/<%= editExpenses._id %>/?_method=PATCH"
+      method="post"
+    >
+      <div class="mb-3">
+        <label class="form-label">Category</label>
+        <input
+          type="text"
+          name="expenses[Category]"
+          value="<%= editExpenses.Category %>"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          name="expenses[Description]"
+          value="hello"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Amount</label>
+        <input
+          type="number"
+          name="expenses[Amount]"
+          placeholder="Amount Spent"
+          value="<%= editExpenses.Amount %>"
+          class="form-control"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-success">Edit</button>
+    </form>
+  </div>
+</body>

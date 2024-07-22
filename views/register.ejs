@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerPlate.ejs") -%>
+
+<body>
+  <div class="row col-6 offset-3">
+    <form
+      class="needs-validation mt-5"
+      novalidate
+      action="/register"
+      method="post"
+    >
+      <div class="mb-3">
+        <label for="text" class="form-label">User-Name</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="User-Name"
+          class="form-control"
+          id="text"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="text" class="form-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          class="form-control"
+          id="text"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="form-control"
+          id="Password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-3">Register</button>
+    </form>
+  </div>
+</body>

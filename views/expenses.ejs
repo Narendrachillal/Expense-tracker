@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerPlate.ejs") -%>
+
+<body class="row">
+  <div class="mt-5 col-8 offset-3">
+    <div class="expense-buttons">
+      <form action="/expenses/new" method="get">
+        <button type="submit" class="btn btn-success">New Expenses</button>
+      </form>
+      <form>
+        <button type="submit" class="btn btn-danger">Summaries Expenses</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="expense mb-3 mt-3 col-8 offset-2 content">
+      <% for(let expense of expenses){ %>
+      <div class="card-outer">
+        <div class="card mb-3">
+          <ul class="list-group">
+            <li class="list-group-item"><%= expense.Category %></li>
+            <li class="list-group-item"><%= expense.Description %></li>
+            <li class="list-group-item"><%= expense.Amount %></li>
+            <li class="list-group-item">
+              <form action="/expenses/<%= expense._id %>/edit" method="get">
+                <button type="submit" class="btn btn-success">Edit</button>
+              </form>
+            </li>
+            <li class="list-group-item">
+              <form
+                action="/expenses/<%= expense._id %>/?_method=DELETE"
+                method="post"
+              >
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</body>

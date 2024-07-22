@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg .bg-danger color sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/expenses">Expense Tracker</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+    >
+      <span><i class="fa-solid fa-bars" style="color: #ffffff"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/expenses"
+            >Home</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="ms-auto">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="nav-right"></div>
+        <!-- <li class="nav-item">
+          <button type="submit" class="btn-text nav-button">
+            
+          </button>
+        </li> -->
+        <li class="nav-item">
+          <form action="/logout" method="get">
+            <button type="submit" class="btn-text nav-button">Logout</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
