@@ -1,2 +1,2 @@
 to run the server nodemon app.js
-http://localjost:9090/expenses
+http://localhost:9090/expenses
